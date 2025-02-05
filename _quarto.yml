@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs  # This is required for GitHub Pages, ensures that GitHub Pages can find the published website files.
   render:
     - "notebooks/*"
 
