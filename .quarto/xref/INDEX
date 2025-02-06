@@ -10,5 +10,8 @@
   },
   "notebooks/TransitSkimMD_compare.ipynb": {
     "TransitSkimMD_compare.html": "c96b2b7b"
+  },
+  "notebooks/TransitSkimEV_compare.ipynb": {
+    "TransitSkimEV_compare.html": "12dc958c"
   }
 }

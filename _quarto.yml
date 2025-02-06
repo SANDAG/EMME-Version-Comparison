@@ -18,6 +18,7 @@ website:
               - notebooks/TransitSkimAM_compare.ipynb
               - notebooks/TransitSkimPM_compare.ipynb
               - notebooks/TransitSkimMD_compare.ipynb
+              - notebooks/TransitSkimEV_compare.ipynb
 
 execute:
   freeze: auto
