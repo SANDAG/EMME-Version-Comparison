@@ -14,6 +14,7 @@ website:
             contents:
             - section: "Transit Skims"
               contents:
+              - notebooks/TransitSkimEA_compare.ipynb
               - notebooks/TransitSkimAM_compare.ipynb
               - notebooks/TransitSkimPM_compare.ipynb
 

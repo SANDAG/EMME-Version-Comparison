@@ -4,5 +4,8 @@
   },
   "notebooks/TransitSkimPM_compare.ipynb": {
     "TransitSkimPM_compare.html": "9bacb4e0"
+  },
+  "notebooks/TransitSkimEA_compare.ipynb": {
+    "TransitSkimEA_compare.html": "2dba9c9d"
   }
 }
