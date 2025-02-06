@@ -7,5 +7,8 @@
   },
   "notebooks/TransitSkimEA_compare.ipynb": {
     "TransitSkimEA_compare.html": "2dba9c9d"
+  },
+  "notebooks/TransitSkimMD_compare.ipynb": {
+    "TransitSkimMD_compare.html": "c96b2b7b"
   }
 }
