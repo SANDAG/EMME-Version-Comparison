@@ -4,8 +4,9 @@
 _freeze/
 docs/site_libs
 
-# Exclude big size file
-/docs/notebooks/iframe_figures/
+notebooks/iframe_figures/figure_5.html
+docs/notebooks/iframe_figures/figure_5.html
+
 
 # Exclude python environment artifacts
 .venv
