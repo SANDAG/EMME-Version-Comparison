@@ -25,6 +25,7 @@ website:
             - section: "Traffic Skims"
               contents:
               - notebooks/TrafficSkimAM.ipynb
+              - notebooks/TrafficSkimPM.ipynb
 
 execute:
   freeze: auto

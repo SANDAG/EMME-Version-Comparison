@@ -82,5 +82,17 @@
       "Transit Skims",
       "PM"
     ]
+  },
+  {
+    "objectID": "notebooks/TrafficSkimPM.html",
+    "href": "notebooks/TrafficSkimPM.html",
+    "title": "PM Peak travel distance skim for SOV NT",
+    "section": "",
+    "text": "Comparison table of select matrix from AM Peak traffic skim (top 5)\n\n\n\n\n\n\n\nOrigin\nDestination\nSOV_NT_M_DIST__PM\n\n\n\n\n1196\n4872\n11.502254\n\n\n1311\n4872\n11.053543\n\n\n1368\n4872\n11.053543\n\n\n1354\n4872\n11.053543\n\n\n1410\n4872\n11.053543\n\n\n\n\n\n\n\ncount    2.447281e+07\nmean     5.467444e-03\nstd      2.765377e-01\nmin     -1.152567e+01\n25%      0.000000e+00\n50%      0.000000e+00\n75%      0.000000e+00\nmax      1.150225e+01\nName: SOV_NT_M_DIST__PM, dtype: float64",
+    "crumbs": [
+      "EMME OpenPath VS. EMME 4.3.7",
+      "Traffic Skims",
+      "PM Peak travel distance skim for SOV NT"
+    ]
   }
 ]
