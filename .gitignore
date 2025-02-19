@@ -2,8 +2,12 @@
 /.quarto/
 /_site/
 _freeze/
-site_libs
+docs/site_libs
+
+# Exclude big size file
+/docs/notebooks/iframe_figures/
 
 # Exclude python environment artifacts
 .venv
 /notebooks/__pycache__/
+/notebooks/.ipynb_checkpoints/

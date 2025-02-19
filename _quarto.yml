@@ -22,6 +22,9 @@ website:
               - notebooks/TransitSkimPM_compare.ipynb
               - notebooks/TransitSkimMD_compare.ipynb
               - notebooks/TransitSkimEV_compare.ipynb
+            - section: "Traffic Skims"
+              contents:
+              - notebooks/TrafficSkimAM.ipynb
 
 execute:
   freeze: auto
