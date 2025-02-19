@@ -1,1 +1,9 @@
+# Exclude Quarto artifacts
 /.quarto/
+/_site/
+_freeze/
+site_libs
+
+# Exclude python environment artifacts
+.venv
+/notebooks/__pycache__/

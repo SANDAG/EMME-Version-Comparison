@@ -120,13 +120,30 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Transit Skims</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Highway Network</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/VMT_VHT_VHD.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Link Flow Comparison</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Transit Skims</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notebooks/TransitSkimEA_compare.html" class="sidebar-item-text sidebar-link">
@@ -171,8 +188,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#user-inptus" id="toc-user-inptus" class="nav-link active" data-scroll-target="#user-inptus">User Inptus</a></li>
-  <li><a href="#scatterplot-comparison-of-md-peak-for-walk-prm-modes-assignment" id="toc-scatterplot-comparison-of-md-peak-for-walk-prm-modes-assignment" class="nav-link" data-scroll-target="#scatterplot-comparison-of-md-peak-for-walk-prm-modes-assignment">Scatterplot Comparison of MD Peak for WALK PRM modes assignment</a></li>
+  <li><a href="#scatterplot-comparison-of-md-peak-for-walk-prm-modes-assignment" id="toc-scatterplot-comparison-of-md-peak-for-walk-prm-modes-assignment" class="nav-link active" data-scroll-target="#scatterplot-comparison-of-md-peak-for-walk-prm-modes-assignment">Scatterplot Comparison of MD Peak for WALK PRM modes assignment</a></li>
   <li><a href="#summary-of-transit-md-skim-comparison-emme-openpath---emme-4.3.7" id="toc-summary-of-transit-md-skim-comparison-emme-openpath---emme-4.3.7" class="nav-link" data-scroll-target="#summary-of-transit-md-skim-comparison-emme-openpath---emme-4.3.7">Summary of transit MD skim comparison (EMME OpenPath - EMME 4.3.7)</a></li>
   </ul>
 </nav>
@@ -199,19 +215,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="user-inptus" class="level1">
-<h1>User Inptus</h1>
-<div id="cell-5" class="cell" data-show_input="true" data-execution_count="4">
-<div class="cell-output cell-output-stdout">
-<pre><code>EMME OpenPath: T:\STORAGE-63T\ABM3_EMME_upgrade\2022_v1521_2\output\skims\transit_skims_MD.omx
-EMME 4.3.7: T:\STORAGE-63T\2025RP_draft\abm_runs_v2\2022_S0_v2\output\skims\transit_skims_MD.omx</code></pre>
-</div>
-</div>
-</section>
 <section id="scatterplot-comparison-of-md-peak-for-walk-prm-modes-assignment" class="level1">
 <h1>Scatterplot Comparison of MD Peak for WALK PRM modes assignment</h1>
 <p>Scatterplot comparison of MD Peak total actual in-vehicle travel time by walk premium</p>
-<div id="cell-10" class="cell" data-execution_count="7">
+<div id="cell-6" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>Intercept: 0.0006
 Slope: 0.9991
@@ -221,13 +228,13 @@ RMSE: 0.4146</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="TransitSkimMD_compare_files/figure-html/cell-8-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="TransitSkimMD_compare_files/figure-html/cell-5-output-2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Scatterplot comparison of MD Peak actual in-vehicle travel time on LRT mode by walk premium</p>
-<div id="cell-12" class="cell" data-execution_count="8">
+<div id="cell-8" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>Intercept: 0.0033
 Slope: 0.9969
@@ -237,13 +244,13 @@ RMSE: 0.5535</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="TransitSkimMD_compare_files/figure-html/cell-9-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="TransitSkimMD_compare_files/figure-html/cell-6-output-2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Scatterplot comparison of MD Peak actual in-vehicle travel time on commuter rail mode by walk premium</p>
-<div id="cell-14" class="cell" data-execution_count="9">
+<div id="cell-10" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>Intercept: 0.0004
 Slope: 0.9998
@@ -253,13 +260,13 @@ RMSE: 0.1737</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="TransitSkimMD_compare_files/figure-html/cell-10-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="TransitSkimMD_compare_files/figure-html/cell-7-output-2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Scatterplot comparison of MD Peak actual in-vehicle travel time on express bus mode by walk premium</p>
-<div id="cell-16" class="cell" data-execution_count="10">
+<div id="cell-12" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>Intercept: 0.0051
 Slope: 0.9887
@@ -269,13 +276,13 @@ RMSE: 0.3215</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="TransitSkimMD_compare_files/figure-html/cell-11-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="TransitSkimMD_compare_files/figure-html/cell-8-output-2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Scatterplot comparison of MD Peak actual in-vehicle travel time on BRT mode by walk premium</p>
-<div id="cell-18" class="cell" data-execution_count="11">
+<div id="cell-14" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>Intercept: 0.0028
 Slope: 1.0015
@@ -285,7 +292,7 @@ RMSE: 0.3914</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="TransitSkimMD_compare_files/figure-html/cell-12-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="TransitSkimMD_compare_files/figure-html/cell-9-output-2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -294,8 +301,8 @@ RMSE: 0.3914</code></pre>
 <section id="summary-of-transit-md-skim-comparison-emme-openpath---emme-4.3.7" class="level1">
 <h1>Summary of transit MD skim comparison (EMME OpenPath - EMME 4.3.7)</h1>
 <p>To display the top 5 rows of skim comparison (sort by WALK_PRM_TOTALIVTT__MD)</p>
-<div id="cell-21" class="cell" data-execution_count="12">
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div id="cell-17" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
 
@@ -318,56 +325,56 @@ RMSE: 0.3914</code></pre>
 <td data-quarto-table-cell-role="th">8800773</td>
 <td>1780</td>
 <td>61</td>
-<td>48.645241</td>
-<td>42.121690</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.65</td>
+<td>42.12</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">8380278</td>
 <td>1695</td>
 <td>61</td>
-<td>48.645241</td>
-<td>42.121690</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.65</td>
+<td>42.12</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">9335049</td>
 <td>1888</td>
 <td>61</td>
-<td>48.645241</td>
-<td>42.121690</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.65</td>
+<td>42.12</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">7450239</td>
 <td>1507</td>
 <td>58</td>
-<td>48.328426</td>
-<td>41.804875</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.33</td>
+<td>41.80</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">7450254</td>
 <td>1507</td>
 <td>73</td>
-<td>48.328426</td>
-<td>41.804875</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.33</td>
+<td>41.80</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 </tbody>
 </table>
@@ -376,87 +383,87 @@ RMSE: 0.3914</code></pre>
 </div>
 </div>
 <p>Below is the summary of select matrices difference in transit MD skim</p>
-<div id="cell-23" class="cell" data-execution_count="13">
-<div class="cell-output cell-output-display" data-execution_count="13">
-<pre><code>count    2.447281e+07
-mean     9.383656e-03
-std      4.151534e-01
-min     -5.777894e+01
-25%      0.000000e+00
-50%      0.000000e+00
-75%      0.000000e+00
-max      4.864524e+01
+<div id="cell-19" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>count   24472809.00
+mean           0.01
+std            0.42
+min          -57.78
+25%            0.00
+50%            0.00
+75%            0.00
+max           48.65
 Name: WALK_PRM_TOTALIVTT__MD, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cell-24" class="cell" data-execution_count="14">
-<div class="cell-output cell-output-display" data-execution_count="14">
-<pre><code>count    2.447281e+07
-mean     1.178389e-02
-std      5.548392e-01
-min     -5.338018e+01
-25%      0.000000e+00
-50%      0.000000e+00
-75%      0.000000e+00
-max      4.924223e+01
+<div id="cell-20" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>count   24472809.00
+mean           0.01
+std            0.55
+min          -53.38
+25%            0.00
+50%            0.00
+75%            0.00
+max           49.24
 Name: WALK_PRM_LRTIVTT__MD, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cell-25" class="cell" data-execution_count="15">
-<div class="cell-output cell-output-display" data-execution_count="15">
-<pre><code>count    2.447281e+07
-mean    -1.301449e-04
-std      1.737217e-01
-min     -5.813091e+01
-25%      0.000000e+00
-50%      0.000000e+00
-75%      0.000000e+00
-max      5.844205e+01
+<div id="cell-21" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>count   24472809.00
+mean          -0.00
+std            0.17
+min          -58.13
+25%            0.00
+50%            0.00
+75%            0.00
+max           58.44
 Name: WALK_PRM_CMRIVTT__MD, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cell-26" class="cell" data-execution_count="16">
-<div class="cell-output cell-output-display" data-execution_count="16">
-<pre><code>count    2.447281e+07
-mean     6.690432e-03
-std      3.276107e-01
-min     -5.979222e+01
-25%      0.000000e+00
-50%      0.000000e+00
-75%      0.000000e+00
-max      5.249318e+01
+<div id="cell-22" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>count   24472809.00
+mean           0.01
+std            0.33
+min          -59.79
+25%            0.00
+50%            0.00
+75%            0.00
+max           52.49
 Name: WALK_PRM_EXPIVTT__MD, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cell-27" class="cell" data-execution_count="17">
-<div class="cell-output cell-output-display" data-execution_count="17">
-<pre><code>count    24472809.0
-mean            0.0
-std             0.0
-min             0.0
-25%             0.0
-50%             0.0
-75%             0.0
-max             0.0
+<div id="cell-23" class="cell" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>count   24472809.00
+mean           0.00
+std            0.00
+min            0.00
+25%            0.00
+50%            0.00
+75%            0.00
+max            0.00
 Name: WALK_PRM_LTDEXPIVTT__MD, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cell-28" class="cell" data-execution_count="18">
-<div class="cell-output cell-output-display" data-execution_count="18">
-<pre><code>count    2.447281e+07
-mean    -8.960526e-03
-std      3.918944e-01
-min     -4.588618e+01
-25%      0.000000e+00
-50%      0.000000e+00
-75%      0.000000e+00
-max      5.955362e+01
+<div id="cell-24" class="cell" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>count   24472809.00
+mean          -0.01
+std            0.39
+min          -45.89
+25%            0.00
+50%            0.00
+75%            0.00
+max           59.55
 Name: WALK_PRM_BRTIVTT__MD, dtype: float64</code></pre>
 </div>
 </div>
 <p>Let’s check the records with difference in WALK_PRM_LRTIVTT__MD greater than 40</p>
-<div id="cell-30" class="cell" data-execution_count="19">
-<div class="cell-output cell-output-display" data-execution_count="19">
+<div id="cell-26" class="cell" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
 
@@ -479,100 +486,100 @@ Name: WALK_PRM_BRTIVTT__MD, dtype: float64</code></pre>
 <td data-quarto-table-cell-role="th">294413</td>
 <td>60</td>
 <td>2541</td>
-<td>15.047424</td>
-<td>49.242229</td>
-<td>-51.379276</td>
-<td>-28.198317</td>
-<td>0.0</td>
-<td>45.382790</td>
+<td>15.05</td>
+<td>49.24</td>
+<td>-51.38</td>
+<td>-28.20</td>
+<td>0.00</td>
+<td>45.38</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">339160</td>
 <td>69</td>
 <td>2765</td>
-<td>11.993317</td>
-<td>49.242229</td>
-<td>-49.327763</td>
-<td>-33.303932</td>
-<td>0.0</td>
-<td>45.382790</td>
+<td>11.99</td>
+<td>49.24</td>
+<td>-49.33</td>
+<td>-33.30</td>
+<td>0.00</td>
+<td>45.38</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">7450239</td>
 <td>1507</td>
 <td>58</td>
-<td>48.328426</td>
-<td>41.804875</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.33</td>
+<td>41.80</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">7450244</td>
 <td>1507</td>
 <td>63</td>
-<td>48.328426</td>
-<td>41.804875</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.33</td>
+<td>41.80</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">7450248</td>
 <td>1507</td>
 <td>67</td>
-<td>48.328426</td>
-<td>41.804875</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.33</td>
+<td>41.80</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">7450254</td>
 <td>1507</td>
 <td>73</td>
-<td>48.328426</td>
-<td>41.804875</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.33</td>
+<td>41.80</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">8380278</td>
 <td>1695</td>
 <td>61</td>
-<td>48.645241</td>
-<td>42.121690</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.65</td>
+<td>42.12</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">8800773</td>
 <td>1780</td>
 <td>61</td>
-<td>48.645241</td>
-<td>42.121690</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.65</td>
+<td>42.12</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">9335049</td>
 <td>1888</td>
 <td>61</td>
-<td>48.645241</td>
-<td>42.121690</td>
-<td>-51.852757</td>
-<td>23.488352</td>
-<td>0.0</td>
-<td>34.887959</td>
+<td>48.65</td>
+<td>42.12</td>
+<td>-51.85</td>
+<td>23.49</td>
+<td>0.00</td>
+<td>34.89</td>
 </tr>
 </tbody>
 </table>
@@ -581,8 +588,8 @@ Name: WALK_PRM_BRTIVTT__MD, dtype: float64</code></pre>
 </div>
 </div>
 <p>Let’s check the records with difference in WALK_PRM_LRTIVTT__MD less than -50</p>
-<div id="cell-32" class="cell" data-execution_count="20">
-<div class="cell-output cell-output-display" data-execution_count="20">
+<div id="cell-28" class="cell" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="17">
 <div>
 
 
@@ -605,56 +612,56 @@ Name: WALK_PRM_BRTIVTT__MD, dtype: float64</code></pre>
 <td data-quarto-table-cell-role="th">12407314</td>
 <td>2509</td>
 <td>239</td>
-<td>-57.778938</td>
-<td>-53.38018</td>
-<td>25.664801</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>-30.063560</td>
+<td>-57.78</td>
+<td>-53.38</td>
+<td>25.66</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>-30.06</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">12407327</td>
 <td>2509</td>
 <td>252</td>
-<td>-57.778938</td>
-<td>-53.38018</td>
-<td>25.664801</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>-30.063560</td>
+<td>-57.78</td>
+<td>-53.38</td>
+<td>25.66</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>-30.06</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">12407328</td>
 <td>2509</td>
 <td>253</td>
-<td>-57.778938</td>
-<td>-53.38018</td>
-<td>25.664801</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>-30.063560</td>
+<td>-57.78</td>
+<td>-53.38</td>
+<td>25.66</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>-30.06</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">12407336</td>
 <td>2509</td>
 <td>261</td>
-<td>-57.778938</td>
-<td>-53.38018</td>
-<td>25.664801</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>-30.063560</td>
+<td>-57.78</td>
+<td>-53.38</td>
+<td>25.66</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>-30.06</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">12407338</td>
 <td>2509</td>
 <td>263</td>
-<td>-57.778938</td>
-<td>-53.38018</td>
-<td>25.664801</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>-30.063560</td>
+<td>-57.78</td>
+<td>-53.38</td>
+<td>25.66</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>-30.06</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">...</td>
@@ -671,235 +678,61 @@ Name: WALK_PRM_BRTIVTT__MD, dtype: float64</code></pre>
 <td data-quarto-table-cell-role="th">14697558</td>
 <td>2972</td>
 <td>22</td>
-<td>-16.834229</td>
-<td>-53.38018</td>
-<td>58.442051</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>-21.896101</td>
+<td>-16.83</td>
+<td>-53.38</td>
+<td>58.44</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>-21.90</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">14786604</td>
 <td>2990</td>
 <td>22</td>
-<td>-16.834229</td>
-<td>-53.38018</td>
-<td>58.442051</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>-21.896101</td>
+<td>-16.83</td>
+<td>-53.38</td>
+<td>58.44</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>-21.90</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">15058689</td>
 <td>3045</td>
 <td>22</td>
-<td>-16.833221</td>
-<td>-53.38018</td>
-<td>58.442051</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>-21.895094</td>
+<td>-16.83</td>
+<td>-53.38</td>
+<td>58.44</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>-21.90</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">15078477</td>
 <td>3049</td>
 <td>22</td>
-<td>-16.833221</td>
-<td>-53.38018</td>
-<td>58.442051</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>-21.895094</td>
+<td>-16.83</td>
+<td>-53.38</td>
+<td>58.44</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>-21.90</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">15548442</td>
 <td>3144</td>
 <td>22</td>
-<td>-16.833221</td>
-<td>-53.38018</td>
-<td>58.442051</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>-21.895094</td>
+<td>-16.83</td>
+<td>-53.38</td>
+<td>58.44</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>-21.90</td>
 </tr>
 </tbody>
 </table>
 
 <p>151 rows × 8 columns</p>
-</div>
-</div>
-</div>
-<div id="cell-33" class="cell" data-show_input="true" data-execution_count="21">
-<div class="cell-output cell-output-stdout">
-<pre><code>Choosing top 25 of WALK_PRM_TOTALIVTT__MD</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="21">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Origin</th>
-<th data-quarto-table-cell-role="th">Destination</th>
-<th data-quarto-table-cell-role="th">WALK_PRM_TOTALIVTT__MD</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407314</td>
-<td>2509</td>
-<td>239</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407361</td>
-<td>2509</td>
-<td>286</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407407</td>
-<td>2509</td>
-<td>332</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407405</td>
-<td>2509</td>
-<td>330</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407392</td>
-<td>2509</td>
-<td>317</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407391</td>
-<td>2509</td>
-<td>316</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407387</td>
-<td>2509</td>
-<td>312</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407386</td>
-<td>2509</td>
-<td>311</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407385</td>
-<td>2509</td>
-<td>310</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407382</td>
-<td>2509</td>
-<td>307</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407366</td>
-<td>2509</td>
-<td>291</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407364</td>
-<td>2509</td>
-<td>289</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407356</td>
-<td>2509</td>
-<td>281</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407327</td>
-<td>2509</td>
-<td>252</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407355</td>
-<td>2509</td>
-<td>280</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407353</td>
-<td>2509</td>
-<td>278</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407352</td>
-<td>2509</td>
-<td>277</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407349</td>
-<td>2509</td>
-<td>274</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407346</td>
-<td>2509</td>
-<td>271</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407344</td>
-<td>2509</td>
-<td>269</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407339</td>
-<td>2509</td>
-<td>264</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407338</td>
-<td>2509</td>
-<td>263</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407336</td>
-<td>2509</td>
-<td>261</td>
-<td>-57.778938</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12407328</td>
-<td>2509</td>
-<td>253</td>
-<td>-57.778938</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12407412</td>
-<td>2509</td>
-<td>337</td>
-<td>-57.778938</td>
-</tr>
-</tbody>
-</table>
-
 </div>
 </div>
 </div>

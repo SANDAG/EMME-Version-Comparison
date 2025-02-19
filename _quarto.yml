@@ -12,6 +12,9 @@ website:
       contents:
           - section: "EMME OpenPath VS. EMME 4.3.7"
             contents:
+            - section: "Highway Network"
+              contents:
+              - notebooks/VMT_VHT_VHD.ipynb
             - section: "Transit Skims"
               contents:
               - notebooks/TransitSkimEA_compare.ipynb
