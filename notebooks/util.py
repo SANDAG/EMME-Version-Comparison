@@ -3,6 +3,9 @@ import numpy as np
 import os
 import openmatrix as omx
 import itertools
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score, mean_squared_error
 
 class HighwayNetwork:
     """ This is the class for all information and utilities relating to highway network.
@@ -421,4 +424,76 @@ class Skim:
             od = od.stack().reset_index().set_axis('Origin Destination {}'.format(sub_matrix).split(), axis=1)
             zoneToZone = zoneToZone.merge(od, on=['Origin', 'Destination'])
         
-        return(zoneToZone) 
+        return(zoneToZone)
+
+    def regression_scatter_plot(matrix, OpenPath, EMME437, time_periods, skim):
+        scenarioOne = Skim.skimReader(OpenPath, time_periods=time_periods,skim=skim)
+        scenarioTwo = Skim.skimReader(EMME437, time_periods=time_periods,skim=skim)
+        
+        OpenPath_values = scenarioOne[matrix].values.reshape(-1, 1)
+        EMME437_values = scenarioTwo[matrix]
+
+        # Fit Linear Regression model
+        lin_reg = LinearRegression()
+        lin_reg.fit(OpenPath_values, EMME437_values)
+        y_pred = lin_reg.predict(OpenPath_values)
+
+        # Compute R² score and Root Mean Squared Error (RMSE)
+        r2 = r2_score(EMME437_values, y_pred)
+        rmse = np.sqrt(mean_squared_error(EMME437_values, y_pred))
+
+        # Output regression parameters
+        intercept = lin_reg.intercept_
+        slope = lin_reg.coef_[0]
+
+        print(f"Intercept: {intercept:.4f}")
+        print(f"Slope: {slope:.4f}")
+        print(f"R² Score: {r2:.4f}")
+        print(f"RMSE: {rmse:.4f}")
+
+        plt.figure(figsize=(9, 7))
+        plt.scatter(OpenPath_values, EMME437_values, color='blue', alpha=0.6, label="Data Points")
+        plt.plot(OpenPath_values, y_pred, color='red', label=f"Regression Line\n$R^2$={r2:.4f},RMSE={rmse:.4f}")
+
+        # Labels and title
+        plt.xlabel("OpenPath Values")
+        plt.ylabel("EMME437 Values")
+        plt.title("Skim Comparison " + matrix)
+        plt.legend()
+        plt.grid(True)
+
+        # Show plot
+        plt.show()   
+
+
+    def comparison(OpenPath, EMME437,time_periods, skim):
+        # generate comparison
+        scenarioOne = Skim.skimReader(OpenPath, skim, time_periods)
+        scenarioTwo = Skim.skimReader(EMME437, skim, time_periods,)
+
+        # OpenPaths minus EMME4.3.7 (exclude Origin and Destination columns)
+        comparison = scenarioOne.set_index(['Origin', 'Destination']) - scenarioTwo.set_index(['Origin','Destination'])
+        comparison.reset_index(inplace=True)
+
+        return comparison
+
+    def histogram_plot(matrix, OpenPath, EMME437,time_periods, skim):
+        comparison = Skim.comparison(OpenPath, EMME437,time_periods, skim)
+        # Create histogram with specified bins
+        counts, bins, patches = plt.hist(comparison[matrix], bins=np.arange(-5, 5.25, 0.25), edgecolor='black')
+
+        # Set title and labels
+        plt.title('Histogram of ' + matrix)
+        plt.xlabel('Impedance difference (OpenPath - EMME437)')
+        plt.ylabel('O-D pairs')
+
+        # Change the y-axis range
+        plt.ylim(0, 30000000) 
+
+        # Add values on top of each bin
+        for count, bin in zip(counts, bins):
+        # Calculate the position for the text (center of each bin)
+            plt.text(bin + 0.125, count, str(int(count)), ha='center', va='bottom', rotation=90)
+
+        # Show the plot
+        plt.show()
