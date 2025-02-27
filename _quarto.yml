@@ -6,13 +6,13 @@ project:
 
 website:
   title: "EMME Version Comparison"
+  navbar:
+    left:
+        - href: notebooks/VMT_VHT_VHD.ipynb  # Set 'VMT_VHT_VHD.ipynb' as the home page
+          text: Home
   sidebar:
       style: "docked"
       search: true
-      navbar:
-        left:
-          href: notebooks/VMT_VHT_VHD.ipynb  # Set 'VMT_VHT_VHD.ipynb' as the home page
-          text: Home
       contents:
           - section: "EMME OpenPath VS. EMME 4.3.7"
             contents:
