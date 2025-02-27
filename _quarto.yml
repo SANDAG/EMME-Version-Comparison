@@ -6,10 +6,6 @@ project:
 
 website:
   title: "EMME Version Comparison"
-  navbar:
-    left:
-      - href: "https://github.com/SANDAG/EMME-Version-Comparison.git"  # External link
-        text: "EMME Version Comparison Repo"
   sidebar:
     style: "docked"
     search: true
