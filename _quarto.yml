@@ -1,28 +1,26 @@
 project:
   type: website
   output-dir: docs  # This is required for GitHub Pages, ensures that GitHub Pages can find the published website files.
-  render:
-    - "notebooks/*"
 
 website:
   title: "EMME Version Comparison"
   sidebar:
-    style: "docked"
-    search: true
-    contents:
-      - section: "EMME OpenPath VS. EMME 4.3.7"
-        contents:
-          - section: "Highway Network"
+      style: "docked"
+      search: true
+      contents:
+          - section: "EMME OpenPath VS. EMME 4.3.7"
             contents:
-            - notebooks/VMT_VHT_VHD.ipynb
-          - section: "Traffic Skims"
-            contents:
-            - notebooks/TrafficSkimAM.ipynb
-            - notebooks/TrafficSkimPM.ipynb
-          - section: "Transit Skims"
-            contents:
-            - notebooks/TransitSkimAM_compare.ipynb
-            - notebooks/TransitSkimPM_compare.ipynb
+            - section: "Highway Network"
+              contents:
+              - notebooks/VMT_VHT_VHD.ipynb
+            - section: "Traffic Skims"
+              contents:
+              - notebooks/TrafficSkimAM.ipynb
+              - notebooks/TrafficSkimPM.ipynb
+            - section: "Transit Skims"
+              contents:
+              - notebooks/TransitSkimAM_compare.ipynb
+              - notebooks/TransitSkimPM_compare.ipynb
             
 
 execute:
