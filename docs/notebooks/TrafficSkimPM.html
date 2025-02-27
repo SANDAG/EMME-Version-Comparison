@@ -137,54 +137,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Transit Skims</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../notebooks/TransitSkimEA_compare.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">EA</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../notebooks/TransitSkimAM_compare.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">AM</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../notebooks/TransitSkimPM_compare.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">PM</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../notebooks/TransitSkimMD_compare.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">MD</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../notebooks/TransitSkimEV_compare.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">EV</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Traffic Skims</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notebooks/TrafficSkimAM.html" class="sidebar-item-text sidebar-link">
@@ -195,6 +154,29 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../notebooks/TrafficSkimPM.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">PM Peak travel distance skim for SOV NT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Transit Skims</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/TransitSkimAM_compare.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/TransitSkimPM_compare.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PM</span></a>
   </div>
 </li>
       </ul>
@@ -231,89 +213,90 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Comparison table of select matrix from PM Peak traffic skim (top 5)</p>
+<p>Scatterplot comparison of PM Peak SOV_NT distance</p>
 <div id="cell-4" class="cell" data-execution_count="3">
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-stdout">
+<pre><code>Intercept: 0.0010
+Slope: 1.0002
+R² Score: 0.9997
+RMSE: 0.2765</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TrafficSkimPM_files/figure-html/cell-4-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-5" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="TrafficSkimPM_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Comparison table of select matrix from PM Peak traffic skim (top 5)</p>
+<div id="cell-7" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <style type="text/css">
-#T_320d2 thead th {
-  background-color: blue;
+#T_2c6e0 thead th {
+  background-color: lightblue;
 }
 </style>
 
-<table id="T_320d2" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<table id="T_2c6e0" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th id="T_320d2_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Origin</th>
-<th id="T_320d2_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Destination</th>
-<th id="T_320d2_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">SOV_NT_M_DIST__PM</th>
+<th id="T_2c6e0_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Origin</th>
+<th id="T_2c6e0_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Destination</th>
+<th id="T_2c6e0_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">SOV_NT_M_DIST__PM</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_320d2_row0_col0" class="data row0 col0">1196</td>
-<td id="T_320d2_row0_col1" class="data row0 col1">4872</td>
-<td id="T_320d2_row0_col2" class="data row0 col2">11.502254</td>
+<td id="T_2c6e0_row0_col0" class="data row0 col0">1196</td>
+<td id="T_2c6e0_row0_col1" class="data row0 col1">4872</td>
+<td id="T_2c6e0_row0_col2" class="data row0 col2">11.50</td>
 </tr>
 <tr class="even">
-<td id="T_320d2_row1_col0" class="data row1 col0">1311</td>
-<td id="T_320d2_row1_col1" class="data row1 col1">4872</td>
-<td id="T_320d2_row1_col2" class="data row1 col2">11.053543</td>
+<td id="T_2c6e0_row1_col0" class="data row1 col0">1311</td>
+<td id="T_2c6e0_row1_col1" class="data row1 col1">4872</td>
+<td id="T_2c6e0_row1_col2" class="data row1 col2">11.05</td>
 </tr>
 <tr class="odd">
-<td id="T_320d2_row2_col0" class="data row2 col0">1368</td>
-<td id="T_320d2_row2_col1" class="data row2 col1">4872</td>
-<td id="T_320d2_row2_col2" class="data row2 col2">11.053543</td>
+<td id="T_2c6e0_row2_col0" class="data row2 col0">1368</td>
+<td id="T_2c6e0_row2_col1" class="data row2 col1">4872</td>
+<td id="T_2c6e0_row2_col2" class="data row2 col2">11.05</td>
 </tr>
 <tr class="even">
-<td id="T_320d2_row3_col0" class="data row3 col0">1354</td>
-<td id="T_320d2_row3_col1" class="data row3 col1">4872</td>
-<td id="T_320d2_row3_col2" class="data row3 col2">11.053543</td>
+<td id="T_2c6e0_row3_col0" class="data row3 col0">1354</td>
+<td id="T_2c6e0_row3_col1" class="data row3 col1">4872</td>
+<td id="T_2c6e0_row3_col2" class="data row3 col2">11.05</td>
 </tr>
 <tr class="odd">
-<td id="T_320d2_row4_col0" class="data row4 col0">1410</td>
-<td id="T_320d2_row4_col1" class="data row4 col1">4872</td>
-<td id="T_320d2_row4_col2" class="data row4 col2">11.053543</td>
+<td id="T_2c6e0_row4_col0" class="data row4 col0">1410</td>
+<td id="T_2c6e0_row4_col1" class="data row4 col1">4872</td>
+<td id="T_2c6e0_row4_col2" class="data row4 col2">11.05</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <p>Summary of Comparison on SOV_NT_M_DIST__PM between EMME OpenPath and EMME437</p>
-<div id="cell-6" class="cell" data-execution_count="4">
-<div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>count    2.447281e+07
-mean     5.467444e-03
-std      2.765377e-01
-min     -1.152567e+01
-25%      0.000000e+00
-50%      0.000000e+00
-75%      0.000000e+00
-max      1.150225e+01
-Name: SOV_NT_M_DIST__PM, dtype: float64</code></pre>
-</div>
-</div>
-<div id="cell-7" class="cell" data-execution_count="5">
+<div id="cell-9" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
-<pre><code>Intercept: 0.0064
-Slope: 0.9996
-R² Score: 0.9997
-RMSE: 0.2764</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="TrafficSkimPM_files/figure-html/cell-6-output-2.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<div id="cell-8" class="cell" data-execution_count="6">
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="TrafficSkimPM_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
+<pre><code>      SOV_NT_M_DIST__PM
+count     24,472,809.00
+mean               0.01
+std                0.28
+min              -11.53
+25%                0.00
+50%                0.00
+75%                0.00
+max               11.50</code></pre>
 </div>
 </div>
 

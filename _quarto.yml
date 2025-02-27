@@ -9,23 +9,25 @@ website:
   sidebar:
       style: "docked"
       search: true
+      navbar:
+        left:
+          href: notebooks/VMT_VHT_VHD.ipynb  # Set 'VMT_VHT_VHD.ipynb' as the home page
+          text: Home
       contents:
           - section: "EMME OpenPath VS. EMME 4.3.7"
             contents:
             - section: "Highway Network"
               contents:
               - notebooks/VMT_VHT_VHD.ipynb
-            - section: "Transit Skims"
-              contents:
-              - notebooks/TransitSkimEA_compare.ipynb
-              - notebooks/TransitSkimAM_compare.ipynb
-              - notebooks/TransitSkimPM_compare.ipynb
-              - notebooks/TransitSkimMD_compare.ipynb
-              - notebooks/TransitSkimEV_compare.ipynb
             - section: "Traffic Skims"
               contents:
               - notebooks/TrafficSkimAM.ipynb
               - notebooks/TrafficSkimPM.ipynb
+            - section: "Transit Skims"
+              contents:
+              - notebooks/TransitSkimAM_compare.ipynb
+              - notebooks/TransitSkimPM_compare.ipynb
+            
 
 execute:
   freeze: auto
