@@ -8,12 +8,14 @@ website:
   title: "EMME Version Comparison"
   navbar:
     left:
-        - href: notebooks/VMT_VHT_VHD.ipynb  # Set 'VMT_VHT_VHD.ipynb' as the home page
-          text: Home
+      - href: notebooks/VMT_VHT_VHD.ipynb
+        text: Home
   sidebar:
       style: "docked"
       search: true
       contents:
+          - href: notebooks/VMT_VHT_VHD.ipynb
+            text: "Home"
           - section: "EMME OpenPath VS. EMME 4.3.7"
             contents:
             - section: "Highway Network"
