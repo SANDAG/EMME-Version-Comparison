@@ -2,7 +2,6 @@
 /.quarto/
 /_site/
 _freeze/
-docs/site_libs
 
 # Exclude python environment artifacts
 .venv
