@@ -8,27 +8,25 @@ website:
   title: "EMME Version Comparison"
   navbar:
     left:
-      - href: notebooks/VMT_VHT_VHD.ipynb
-        text: Home
+      - href: "https://github.com/SANDAG/EMME-Version-Comparison.git"  # External link
+        text: "EMME Version Comparison Repo"
   sidebar:
-      style: "docked"
-      search: true
-      contents:
-          - href: notebooks/VMT_VHT_VHD.ipynb
-            text: "Home"
-          - section: "EMME OpenPath VS. EMME 4.3.7"
+    style: "docked"
+    search: true
+    contents:
+      - section: "EMME OpenPath VS. EMME 4.3.7"
+        contents:
+          - section: "Highway Network"
             contents:
-            - section: "Highway Network"
-              contents:
-              - notebooks/VMT_VHT_VHD.ipynb
-            - section: "Traffic Skims"
-              contents:
-              - notebooks/TrafficSkimAM.ipynb
-              - notebooks/TrafficSkimPM.ipynb
-            - section: "Transit Skims"
-              contents:
-              - notebooks/TransitSkimAM_compare.ipynb
-              - notebooks/TransitSkimPM_compare.ipynb
+            - notebooks/VMT_VHT_VHD.ipynb
+          - section: "Traffic Skims"
+            contents:
+            - notebooks/TrafficSkimAM.ipynb
+            - notebooks/TrafficSkimPM.ipynb
+          - section: "Transit Skims"
+            contents:
+            - notebooks/TransitSkimAM_compare.ipynb
+            - notebooks/TransitSkimPM_compare.ipynb
             
 
 execute:
