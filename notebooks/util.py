@@ -36,6 +36,8 @@ class HighwayNetwork:
                 data = pd.read_csv(
                     os.path.join(scenario_path, 'report','hwyload_' + tp + '.csv'),
                     usecols=["ID1",  # hwycov id
+                            "AB_Speed", #AB directional loaded speed
+                            "BA_Speed", #BA directional loaded speed 
                             "AB_Time",  # A-B direction loaded time
                             "BA_Time",  # B-A direction loaded time
                             "AB_Flow_SOV_NTPL",
@@ -127,6 +129,7 @@ class HighwayNetwork:
                 usecols=["ID",  # hwycov id
                         "Length",  # length of link segment (miles)
                         "FC",  # link functional class
+                        "SPD", # Link speed in mph
                         "ABTM_EA",  # A-B direction Early AM free flow time (minutes)
                         "ABTM_AM",  # A-B direction AM Peak free flow time (minutes)
                         "ABTM_MD",  # A-B direction Mid-day free flow time (minutes)
@@ -170,7 +173,8 @@ class HighwayNetwork:
                          "BAPRELOAD"],
                 i=["ID",
                    "Length",
-                   "FC"],
+                   "FC",
+                   "SPD"],
                 j="timePeriod",
                 sep="_",
                 suffix="\w+").reset_index()
@@ -340,15 +344,17 @@ class HighwayNetwork:
             data[['Auto_VHD', 'Truck_VHD', 'Bus_VHD']] = data[['Auto_VHD', 'Truck_VHD', 'Bus_VHD']].clip(lower=0)
             data['Total_VHD'] = data[['Auto_VHD', 'Truck_VHD', 'Bus_VHD']].sum(axis=1)
             group_column = 'Total_VHD'
+        elif metric == 'speed':
+            data['Average_Speed'] = ((data.AB_Flow * data.AB_Speed) + (data.BA_Flow * data.BA_Speed))/(data.AB_Flow + data.BA_Flow)
+            group_column = 'Average_Speed'
+        
+        group_key = 'timePeriod' if group == 'timePeriod' else 'fc_desc'
+        agg_func = 'mean' if metric == 'speed' else 'sum'
+        total_label = 'Average' if metric == 'speed' else 'Total'
 
-        if group == 'timePeriod':
-            grouped_data = data.groupby('timePeriod', as_index=False)[group_column].sum()
-            total = grouped_data.sum(numeric_only=True)
-            total['timePeriod'] = 'Total'
-        else:
-            grouped_data = data.groupby(['fc_desc'], as_index=False)[group_column].sum()
-            total = grouped_data.sum(numeric_only=True)
-            total['fc_desc'] = 'Total'
+        grouped_data = data.groupby(group_key, as_index=False)[group_column].agg(agg_func)
+        total = grouped_data.agg(agg_func, numeric_only=True)
+        total[group_key] = total_label
 
         return grouped_data.append(total, ignore_index=True)
 

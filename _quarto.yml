@@ -13,6 +13,7 @@ website:
             - section: "Highway Network"
               contents:
               - notebooks/VMT_VHT_VHD.ipynb
+              - notebooks/Speed.ipynb
             - section: "Traffic Skims"
               contents:
               - notebooks/TrafficSkimAM.ipynb

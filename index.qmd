@@ -8,7 +8,7 @@ format: html
 This website provides a detailed comparison between **EMME OpenPath** and **EMME 4.3.7**.
 
 ## 📌 Explore:
-- **Highway Network**: [VMT, VHT, VHD](notebooks/VMT_VHT_VHD.ipynb)
+- **Highway Network**: [VMT, VHT, VHD](notebooks/VMT_VHT_VHD.ipynb) | [Speed](notebooks/Speed.ipynb)
 - **Traffic Skims**: [AM](notebooks/TrafficSkimAM.ipynb) | [PM](notebooks/TrafficSkimPM.ipynb)
 - **Transit Skims**: [AM](notebooks/TransitSkimAM_compare.ipynb) | [PM](notebooks/TransitSkimPM_compare.ipynb)
 
