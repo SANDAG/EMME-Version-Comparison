@@ -14,6 +14,6 @@ This website provides a detailed comparison between **EMME OpenPath** and **EMME
 - **Tests**: 
 	- [Test 1:Isolating the changes by running the assignments with fixed inputs](notebooks/TransitSkimAM_compare_test1.ipynb)
 	- [Test 2:Evaluating the network flow with fixed demand](notebooks/TransitSkimAM_compare_test2.ipynb)
-	- [Test 3:Re-running the Transit Assignment with Partial EMME 4.3.7 Model Run](notebooks/TransitSkimAM_compare_test1.ipynb)
+	- [Test 3:Re-running the Transit Assignment with Partial EMME 4.3.7 Model Run](notebooks/TransitSkimAM_compare_test3.ipynb)
 
 Use the sidebar for easy navigation. 🚀
