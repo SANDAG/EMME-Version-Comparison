@@ -22,6 +22,14 @@ website:
               contents:
               - notebooks/TransitSkimAM_compare.ipynb
               - notebooks/TransitSkimPM_compare.ipynb
+            - section: "Tests"
+              contents:
+              - notebooks/TransitSkimAM_OpenPaths_OBS.ipynb
+              - notebooks/TransitSkimAM_EMME437_OBS.ipynb
+              - notebooks/TransitSkimAM_EMME437_transitAssign.ipynb
+              - notebooks/TransitSkimAM_compare_test1.ipynb
+              - notebooks/TransitSkimAM_compare_test2.ipynb
+              - notebooks/TransitSkimAM_compare_test3.ipynb
             
 
 execute:

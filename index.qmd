@@ -11,5 +11,8 @@ This website provides a detailed comparison between **EMME OpenPath** and **EMME
 - **Highway Network**: [VMT, VHT, VHD](notebooks/VMT_VHT_VHD.ipynb) | [Speed](notebooks/Speed.ipynb)
 - **Traffic Skims**: [AM](notebooks/TrafficSkimAM.ipynb) | [PM](notebooks/TrafficSkimPM.ipynb)
 - **Transit Skims**: [AM](notebooks/TransitSkimAM_compare.ipynb) | [PM](notebooks/TransitSkimPM_compare.ipynb)
+- **Tests**: [Test 1:Isolating the changes by running the assignments with fixed inputs](notebooks/TransitSkim_compare_test1.ipynb)
+			 [Test 2:Evaluating the network flow with fixed demand](notebooks/TransitSkim_compare_test2.ipynb)
+			 [Test 3:Re-running the Transit Assignment with Partial EMME 4.3.7 Model Run](notebooks/TransitSkim_compare_test1.ipynb)
 
 Use the sidebar for easy navigation. 🚀

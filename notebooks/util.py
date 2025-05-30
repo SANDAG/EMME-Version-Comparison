@@ -122,7 +122,7 @@ class HighwayNetwork:
                 data['timePeriod'] = tp
 
                 # add to result DataFrame
-                hwy_load = hwy_load.append(data)
+                hwy_load = pd.concat([hwy_load,data], ignore_index=True)
 
             hwy_tcad = pd.read_csv(
                 os.path.join(scenario_path, 'report','hwyTcad.csv'),
@@ -177,7 +177,7 @@ class HighwayNetwork:
                    "SPD"],
                 j="timePeriod",
                 sep="_",
-                suffix="\w+").reset_index()
+                suffix=r"\w+").reset_index()
             
             # fill NaN values with 0s
             hwy_tcad.fillna(value=0, inplace=True)
@@ -292,7 +292,7 @@ class HighwayNetwork:
                 "FC"],
                 j="timePeriod",
                 sep="_",
-                suffix="\w+").reset_index()
+                suffix=r"\w+").reset_index()
             
             # fill NaN values with 0s
             hwy_tcad.fillna(value=0, inplace=True)
@@ -356,7 +356,7 @@ class HighwayNetwork:
         total = grouped_data.agg(agg_func, numeric_only=True)
         total[group_key] = total_label
 
-        return grouped_data.append(total, ignore_index=True)
+        return pd.concat([grouped_data,total.to_frame().T], ignore_index=True)
 
     def network_metric_raw(scenario_path, metric, group):
         data = HighwayNetwork.read_hwynetwork(scenario_path)
@@ -383,8 +383,15 @@ class HighwayNetwork:
         return grouped_data.append(total, ignore_index=True)
 
 class Skim:
-    # compare function
-    def skimReader(scenario_path, skim = ['transit','traffic'], time_periods = ['EA', 'AM', 'MD', 'PM', 'EV']):
+    def  __init__(self, desc_label=None):
+        self.desc_label = desc_label
+        self.skim_df = None
+    
+    #read skim data by 'transit' or 'traffic' at differnt time periods ['EA', 'AM', 'MD', 'PM', 'EV']
+    def skimReader(self, scenario_path, skim, time_periods, desc_label=None):
+        if desc_label is not None:
+            self.desc_label = desc_label
+        
         tp = time_periods
 
         if skim == 'transit':
@@ -398,11 +405,13 @@ class Skim:
                 ,'WALK_PRM_BRTIVTT__'  + tp
                 ,'WALK_LOC_TOTALIVTT__' + tp
                 ,'WALK_MIX_TOTALIVTT__' + tp
-                ,'WALK_PRM_XFERS__' + tp
-                ,'WALK_LOC_XFERS__' + tp
-                ,'WALK_MIX_XFERS__' + tp
+                #,'WALK_PRM_XFERS__' + tp
+                #,'WALK_LOC_XFERS__' + tp
+                #,'WALK_MIX_XFERS__' + tp
+                #,'WALK_MIX_FIRSTWAIT__' + tp
+                #,'WALK_MIX_FARE__'+ tp
                 ]
-        if skim == 'traffic':
+        elif skim == 'traffic':
              matrix = 'traffic_skims_' + tp + '.omx'
              sub_matrices = [
                 'SOV_NT_M_DIST__' + tp
@@ -412,10 +421,10 @@ class Skim:
                 #,'HOV3_M_HOVDIST__' + tp
                 #,'HOV3_M_TIME__' + tp
                 ]
+        else:
+                raise ValueError("skim must be 'transit' or 'traffic'")
 
-        inSkim = os.path.join(scenario_path, 'output', 'skims', matrix)        
-
-
+        inSkim = os.path.join(scenario_path, 'output', 'skims', matrix) 
         # read skim
         skims = omx.open_file(inSkim)
         zones = list(skims.mapping('zone_number').keys())
@@ -434,23 +443,24 @@ class Skim:
             od = od.stack().reset_index().set_axis('Origin Destination {}'.format(sub_matrix).split(), axis=1)
             zoneToZone = zoneToZone.merge(od, on=['Origin', 'Destination'])
         
-        return(zoneToZone)
+        skims.close()
+        self.skim_df = (zoneToZone)
 
-    def regression_scatter_plot(matrix, OpenPath, EMME437, time_periods, skim):
-        scenario_EMME437 = Skim.skimReader(EMME437, time_periods=time_periods,skim=skim)
-        scenario_OpenPath = Skim.skimReader(OpenPath, time_periods=time_periods,skim=skim)
-        
-        EMME437_values = scenario_EMME437[matrix].values.reshape(-1, 1)
-        OpenPath_values = scenario_OpenPath[matrix]
+class SkimCompare:
+
+    def regression_scatter_plot(base, compare, matrix):
+
+        base_values = base.skim_df[matrix].values.reshape(-1, 1)
+        comp_values = compare.skim_df[matrix]
 
         # Fit Linear Regression model
         lin_reg = LinearRegression()
-        lin_reg.fit(EMME437_values, OpenPath_values)
-        y_pred = lin_reg.predict(EMME437_values)
+        lin_reg.fit(base_values, comp_values)
+        y_pred = lin_reg.predict(base_values)
 
         # Compute R² score and Root Mean Squared Error (RMSE)
-        r2 = r2_score(OpenPath_values, y_pred)
-        rmse = np.sqrt(mean_squared_error(OpenPath_values, y_pred))
+        r2 = r2_score(comp_values, y_pred)
+        rmse = np.sqrt(mean_squared_error(comp_values, y_pred))
 
         # Output regression parameters
         intercept = lin_reg.intercept_
@@ -462,12 +472,12 @@ class Skim:
         print(f"RMSE: {rmse:.4f}")
 
         plt.figure(figsize=(9, 7))
-        plt.scatter(EMME437_values, OpenPath_values, color='blue', alpha=0.6, label="Data Points")
-        plt.plot(EMME437_values, y_pred, color='red', label=f"Regression Line\n$R^2$={r2:.4f},RMSE={rmse:.4f}")
+        plt.scatter(base_values, comp_values, color='blue', alpha=0.6, label="Data Points")
+        plt.plot(base_values, y_pred, color='red', label=f"Regression Line\n$R^2$={r2:.4f},RMSE={rmse:.4f}")
 
         # Labels and title
-        plt.xlabel("EMME437 Values")
-        plt.ylabel("OpenPath Values")
+        plt.xlabel(base.desc_label)
+        plt.ylabel(compare.desc_label)
         plt.title("Skim Comparison " + matrix)
         plt.legend()
         plt.grid(True)
@@ -475,21 +485,15 @@ class Skim:
         # Show plot
         plt.show()   
 
-
-    def comparison(OpenPath, EMME437,time_periods, skim):
+    def comparison(base_skim, comp_skim):
         # generate comparison
-        scenario_OpenPath = Skim.skimReader(OpenPath, skim, time_periods)
-        scenario_EMME437 = Skim.skimReader(EMME437, skim, time_periods)
-
-        # OpenPaths minus EMME4.3.7 (exclude Origin and Destination columns)
-        comparison = scenario_OpenPath.set_index(['Origin', 'Destination']) - scenario_EMME437.set_index(['Origin','Destination'])
+        comparison = comp_skim.set_index(['Origin', 'Destination']) - base_skim.set_index(['Origin','Destination'])
         comparison.reset_index(inplace=True)
 
         return comparison
 
-    def histogram_plot(matrix, OpenPath, EMME437,time_periods, skim):
-        comparison = Skim.comparison(OpenPath, EMME437,time_periods, skim)
-
+    def histogram_plot(matrix, comparison):
+        
         # Set figure size
         plt.figure(figsize=(9, 7))  # Width=9, Height=7
         # Create histogram with specified bins
@@ -497,7 +501,7 @@ class Skim:
 
         # Set title and labels
         plt.title('Histogram of ' + matrix)
-        plt.xlabel('Impedance difference (OpenPath - EMME437)')
+        plt.xlabel('Impedance difference')
         plt.ylabel('O-D pairs')
 
         # Change the y-axis range
