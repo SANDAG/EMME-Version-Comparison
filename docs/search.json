@@ -76,14 +76,14 @@
     "href": "index.html",
     "title": "EMME-Version-Comparison",
     "section": "",
-    "text": "This website provides a detailed comparison between EMME OpenPath and EMME 4.3.7.\n\n\n\nHighway Network: VMT, VHT, VHD | Speed\nTraffic Skims: AM | PM\nTransit Skims: AM | PM\nTests: Test 1:Isolating the changes by running the assignments with fixed inputs Test 2:Evaluating the network flow with fixed demand Test 3:Re-running the Transit Assignment with Partial EMME 4.3.7 Model Run\n\nUse the sidebar for easy navigation. 🚀"
+    "text": "This website provides a detailed comparison between EMME OpenPath and EMME 4.3.7.\n\n\n\nHighway Network: VMT, VHT, VHD | Speed\nTraffic Skims: AM | PM\nTransit Skims: AM | PM\nTests:\n\nTest 1:Isolating the changes by running the assignments with fixed inputs\nTest 2:Evaluating the network flow with fixed demand\nTest 3:Re-running the Transit Assignment with Partial EMME 4.3.7 Model Run\n\n\nUse the sidebar for easy navigation. 🚀"
   },
   {
     "objectID": "index.html#explore",
     "href": "index.html#explore",
     "title": "EMME-Version-Comparison",
     "section": "",
-    "text": "Highway Network: VMT, VHT, VHD | Speed\nTraffic Skims: AM | PM\nTransit Skims: AM | PM\nTests: Test 1:Isolating the changes by running the assignments with fixed inputs Test 2:Evaluating the network flow with fixed demand Test 3:Re-running the Transit Assignment with Partial EMME 4.3.7 Model Run\n\nUse the sidebar for easy navigation. 🚀"
+    "text": "Highway Network: VMT, VHT, VHD | Speed\nTraffic Skims: AM | PM\nTransit Skims: AM | PM\nTests:\n\nTest 1:Isolating the changes by running the assignments with fixed inputs\nTest 2:Evaluating the network flow with fixed demand\nTest 3:Re-running the Transit Assignment with Partial EMME 4.3.7 Model Run\n\n\nUse the sidebar for easy navigation. 🚀"
   },
   {
     "objectID": "about.html",
